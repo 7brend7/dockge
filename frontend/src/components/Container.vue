@@ -16,9 +16,8 @@
             </div>
             <div class="col-5">
                 <div class="function">
-                    <router-link v-if="!isEditMode" class="btn btn-normal" :to="terminalRouteLink" disabled="">
+                    <router-link v-if="!isEditMode" class="btn btn-sm btn-normal" :to="terminalRouteLink" :title="'Bash'">
                         <font-awesome-icon icon="terminal" />
-                        Bash
                     </router-link>
                 </div>
             </div>

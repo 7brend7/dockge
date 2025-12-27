@@ -11,42 +11,35 @@
 
             <div v-if="stack.isManagedByDockge" class="mb-3">
                 <div class="btn-group me-2" role="group">
-                    <button v-if="isEditMode" class="btn btn-primary" :disabled="processing" @click="deployStack">
-                        <font-awesome-icon icon="rocket" class="me-1" />
-                        {{ $t("deployStack") }}
+                    <button v-if="isEditMode" class="btn btn-sm btn-primary" :disabled="processing" @click="deployStack" :title="$t('deployStack')">
+                        <font-awesome-icon icon="rocket" />
                     </button>
 
-                    <button v-if="isEditMode" class="btn btn-normal" :disabled="processing" @click="saveStack">
-                        <font-awesome-icon icon="save" class="me-1" />
-                        {{ $t("saveStackDraft") }}
+                    <button v-if="isEditMode" class="btn btn-sm btn-normal" :disabled="processing" @click="saveStack" :title="$t('saveStackDraft')">
+                        <font-awesome-icon icon="save" />
                     </button>
 
-                    <button v-if="!isEditMode" class="btn btn-secondary" :disabled="processing" @click="enableEditMode">
-                        <font-awesome-icon icon="pen" class="me-1" />
-                        {{ $t("editStack") }}
+                    <button v-if="!isEditMode" class="btn btn-sm btn-secondary" :disabled="processing" @click="enableEditMode" :title="$t('editStack')">
+                        <font-awesome-icon icon="pen" />
                     </button>
 
-                    <button v-if="!isEditMode && !active" class="btn btn-primary" :disabled="processing" @click="startStack">
-                        <font-awesome-icon icon="play" class="me-1" />
-                        {{ $t("startStack") }}
+                    <button v-if="!isEditMode && !active" class="btn btn-sm btn-primary" :disabled="processing" @click="startStack" :title="$t('startStack')">
+                        <font-awesome-icon icon="play" />
                     </button>
 
-                    <button v-if="!isEditMode && active" class="btn btn-normal " :disabled="processing" @click="restartStack">
-                        <font-awesome-icon icon="rotate" class="me-1" />
-                        {{ $t("restartStack") }}
+                    <button v-if="!isEditMode && active" class="btn btn-sm btn-normal" :disabled="processing" @click="restartStack" :title="$t('restartStack')">
+                        <font-awesome-icon icon="rotate" />
                     </button>
 
-                    <button v-if="!isEditMode" class="btn btn-normal" :disabled="processing" @click="updateStack">
-                        <font-awesome-icon icon="cloud-arrow-down" class="me-1" />
-                        {{ $t("updateStack") }}
+                    <button v-if="!isEditMode" class="btn btn-sm btn-normal" :disabled="processing" @click="updateStack" :title="$t('updateStack')">
+                        <font-awesome-icon icon="cloud-arrow-down" />
                     </button>
 
-                    <button v-if="!isEditMode && active" class="btn btn-normal" :disabled="processing" @click="stopStack">
-                        <font-awesome-icon icon="stop" class="me-1" />
-                        {{ $t("stopStack") }}
+                    <button v-if="!isEditMode && active" class="btn btn-sm btn-normal" :disabled="processing" @click="stopStack" :title="$t('stopStack')">
+                        <font-awesome-icon icon="stop" />
                     </button>
 
-                    <BDropdown right text="" variant="normal">
+                    <BDropdown right text="" variant="normal" size="sm">
                         <BDropdownItem @click="downStack">
                             <font-awesome-icon icon="stop" class="me-1" />
                             {{ $t("downStack") }}
@@ -54,10 +47,9 @@
                     </BDropdown>
                 </div>
 
-                <button v-if="isEditMode && !isAdd" class="btn btn-normal" :disabled="processing" @click="discardStack">{{ $t("discardStack") }}</button>
-                <button v-if="!isEditMode" class="btn btn-danger" :disabled="processing" @click="showDeleteDialog = !showDeleteDialog">
-                    <font-awesome-icon icon="trash" class="me-1" />
-                    {{ $t("deleteStack") }}
+                <button v-if="isEditMode && !isAdd" class="btn btn-sm btn-normal" :disabled="processing" @click="discardStack">{{ $t("discardStack") }}</button>
+                <button v-if="!isEditMode" class="btn btn-sm btn-danger" :disabled="processing" @click="showDeleteDialog = !showDeleteDialog" :title="$t('deleteStack')">
+                    <font-awesome-icon icon="trash" />
                 </button>
             </div>
 

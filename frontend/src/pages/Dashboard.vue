@@ -2,9 +2,7 @@
     <div class="container-fluid">
         <div class="row">
             <div v-if="!$root.isMobile" class="col-12 col-md-4 col-xl-3">
-                <div>
-                    <router-link to="/compose" class="btn btn-primary mb-3"><font-awesome-icon icon="plus" /> {{ $t("compose") }}</router-link>
-                </div>
+                <!-- Compose button hidden for embed mode -->
                 <StackList :scrollbar="true" />
             </div>
 

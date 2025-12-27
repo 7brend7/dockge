@@ -7,11 +7,19 @@
 }
 
 h1 {
-    font-size: 32px;
+    font-size: 22px;
 }
 
 h2 {
-    font-size: 26px;
+    font-size: 18px;
+}
+
+h3 {
+    font-size: 15px;
+}
+
+h4 {
+    font-size: 14px;
 }
 
 textarea.form-control {
@@ -60,6 +68,7 @@ textarea.form-control {
 // optgroup
 optgroup {
     color: #b1b1b1;
+
     option {
         color: #212529;
     }
@@ -68,6 +77,7 @@ optgroup {
 .dark {
     optgroup {
         color: #535864;
+
         option {
             color: $dark-font-color;
         }
@@ -101,11 +111,11 @@ optgroup {
 
 .shadow-box {
     box-shadow: 0 15px 70px rgba(0, 0, 0, 0.1);
-    padding: 10px;
+    padding: 6px;
     border-radius: 10px;
 
     &.big-padding {
-        padding: 20px;
+        padding: 12px;
     }
 }
 
@@ -122,7 +132,10 @@ optgroup {
     color: white;
     background: $primary-gradient;
 
-    &:hover, &:active, &:focus, &.active {
+    &:hover,
+    &:active,
+    &:focus,
+    &.active {
         color: white;
         background: $primary-gradient-active;
         border-color: $highlight;
@@ -149,7 +162,10 @@ optgroup {
 .btn-warning {
     color: white;
 
-    &:hover, &:active, &:focus, &.active {
+    &:hover,
+    &:active,
+    &:focus,
+    &.active {
         color: white;
     }
 }
@@ -157,7 +173,10 @@ optgroup {
 .btn-info {
     color: white;
 
-    &:hover, &:active, &:focus, &.active {
+    &:hover,
+    &:active,
+    &:focus,
+    &.active {
         color: white;
     }
 }
@@ -238,11 +257,13 @@ optgroup {
     background-color: #090c10;
     color: $dark-font-color;
 
-    mark, .mark {
+    mark,
+    .mark {
         background-color: #b6ad86;
     }
 
-    &::-webkit-scrollbar-thumb, ::-webkit-scrollbar-thumb {
+    &::-webkit-scrollbar-thumb,
+    ::-webkit-scrollbar-thumb {
         background: $dark-border-color;
     }
 
@@ -299,21 +320,24 @@ optgroup {
         background-color: $dark-bg;
     }
 
-    .form-control, .form-select {
+    .form-control,
+    .form-select {
         border-color: $dark-border-color;
     }
 
-    .form-control:disabled, .form-control[readonly] {
+    .form-control:disabled,
+    .form-control[readonly] {
         background-color: #232f3b;
         opacity: 1;
     }
 
-    .table-hover > tbody > tr:hover > * {
+    .table-hover>tbody>tr:hover>* {
         --bs-table-accent-bg: #070a10;
         color: $dark-font-color;
     }
 
-    .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    .nav-pills .nav-link.active,
+    .nav-pills .show>.nav-link {
         color: $dark-font-color2;
         background: $primary-gradient;
 
@@ -348,7 +372,10 @@ optgroup {
     .btn-warning {
         color: $dark-font-color2;
 
-        &:hover, &:active, &:focus, &.active {
+        &:hover,
+        &:active,
+        &:focus,
+        &.active {
             color: $dark-font-color2;
         }
     }
@@ -409,6 +436,7 @@ optgroup {
     }
 
     .alert {
+
         &.bg-info,
         &.bg-warning,
         &.bg-danger,
@@ -420,11 +448,14 @@ optgroup {
 }
 
 // Floating Label
-.form-floating > .form-control:focus ~ label::after, .form-floating > .form-control:not(:placeholder-shown) ~ label::after, .form-floating > .form-control-plaintext ~ label::after, .form-floating > .form-select ~ label::after {
+.form-floating>.form-control:focus~label::after,
+.form-floating>.form-control:not(:placeholder-shown)~label::after,
+.form-floating>.form-control-plaintext~label::after,
+.form-floating>.form-select~label::after {
     background-color: transparent;
 }
 
-.form-floating > label {
+.form-floating>label {
     .dark & {
         color: $dark-font-color3 !important;
     }
@@ -492,11 +523,12 @@ optgroup {
     .item {
         display: flex;
         align-items: center;
-        height: 52px;
+        height: 36px;
         text-decoration: none;
-        border-radius: 10px;
+        border-radius: 8px;
         transition: all ease-in-out 0.15s;
         width: 100%;
+        font-size: 13px;
         padding: 0 8px;
 
         &.disabled {
@@ -603,7 +635,8 @@ h5.settings-subheading::after {
 }
 
 /* required class */
-.code-editor, .css-editor {
+.code-editor,
+.css-editor {
     /* we dont use `language-` classes anymore so thats why we need to add background and text color manually */
 
     border-radius: 1rem;
@@ -675,20 +708,26 @@ code {
 
 
 .cm-gutters {
-	background-color: transparent !important;
+    background-color: transparent !important;
 }
+
 .dark [contenteditable="true"] {
-	background-color: transparent !important;
+    background-color: transparent !important;
 }
+
 .cm-editor {
-	background-color: transparent !important;
+    background-color: transparent !important;
 }
-.cm-activeLine, .cm-activeLineGutter {
-	background-color: transparent !important;
+
+.cm-activeLine,
+.cm-activeLineGutter {
+    background-color: transparent !important;
 }
+
 .cm-selectionBackground {
     background-color: #74c2ff3d !important;
 }
+
 .cm-focused {
     outline: none !important;
 }

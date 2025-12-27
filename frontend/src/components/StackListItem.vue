@@ -133,11 +133,12 @@ export default {
     text-decoration: none;
     display: flex;
     align-items: center;
-    min-height: 52px;
-    border-radius: 10px;
+    min-height: 36px;
+    border-radius: 8px;
     transition: all ease-in-out 0.15s;
     width: 100%;
-    padding: 5px 8px;
+    padding: 3px 6px;
+    font-size: 13px;
     &.disabled {
         opacity: 0.3;
     }

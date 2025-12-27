@@ -2,12 +2,6 @@
     <div class="shadow-box mb-3" :style="boxStyle">
         <div class="list-header">
             <div class="header-top">
-                <!-- TODO -->
-                <button v-if="false" class="btn btn-outline-normal ms-2" :class="{ 'active': selectMode }" type="button" @click="selectMode = !selectMode">
-                    {{ $t("Select") }}
-                </button>
-
-                <div class="placeholder"></div>
                 <div class="search-wrapper">
                     <a v-if="searchText == ''" class="search-icon">
                         <font-awesome-icon icon="search" />
@@ -105,11 +99,11 @@ export default {
         boxStyle() {
             if (window.innerWidth > 550) {
                 return {
-                    height: `calc(100vh - 160px + ${this.windowTop}px)`,
+                    height: `calc(100vh - 40px + ${this.windowTop}px)`,
                 };
             } else {
                 return {
-                    height: "calc(100vh - 160px)",
+                    height: "calc(100vh - 40px)",
                 };
             }
 
@@ -354,9 +348,9 @@ export default {
 @import "../styles/vars.scss";
 
 .shadow-box {
-    height: calc(100vh - 150px);
+    height: calc(100vh - 30px);
     position: sticky;
-    top: 10px;
+    top: 5px;
 }
 
 .small-padding {
@@ -366,10 +360,10 @@ export default {
 
 .list-header {
     border-bottom: 1px solid #dee2e6;
-    border-radius: 10px 10px 0 0;
-    margin: -10px;
-    margin-bottom: 10px;
-    padding: 10px;
+    border-radius: 8px 8px 0 0;
+    margin: -6px;
+    margin-bottom: 6px;
+    padding: 6px;
 
     .dark & {
         background-color: $dark-header-bg;
@@ -399,6 +393,11 @@ export default {
 .search-wrapper {
     display: flex;
     align-items: center;
+    width: 100%;
+
+    form {
+        flex: 1;
+    }
 }
 
 .search-icon {
@@ -417,7 +416,7 @@ export default {
 }
 
 .search-input {
-    max-width: 15em;
+    width: 100%;
 }
 
 .stack-item {
